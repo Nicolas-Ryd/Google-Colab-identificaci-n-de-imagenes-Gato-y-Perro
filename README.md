@@ -1,2 +1,13 @@
 # Google-Colab-identificaci-n-de-imagenes-Gato-y-Perro
-En este proyecto he creado una IA capaz de identificar imagenes de perros y de gatos utilizando machine learning como principal programa y google colab como el compilador para toda la información de cientos de imagenes.
+En este proyecto he creado una IA capaz de identificar y clasificar imagenes de perros y de gatos utilizando machine learning como principal programa y google colab como el compilador para toda la información de cientos de imagenes. 
+
+En primer lugar, se habilitamos el modo legacy Keras, después, el programa carga el modelo ya entrenado, junto a las etiquetas clasificatorias de cada clase.
+A continuación, se prepara una imagen para realizar la primera prueba. La imagen se abre y se convierte al formato de color adecuado. Seguidamente, se procesa para adaptarse a los requisitos del modelo: se redimensiona a un tamaño específico, se ajusta su composición y se normalizan los valores de sus píxeles. Este preprocesamiento es esencial para que la entrada sea compatible con el modelo y permita obtener una predicción fiable.
+Fase 4: Predicción y Fase 5: Post-procesamiento
+Una vez que la imagen está transformada, se organiza en un lote de datos, ya que el modelo espera recibir las imágenes en colecciones, aunque solo sea una. Se ejecuta entonces el proceso de predicción, en el que el modelo analiza la imagen y genera una probabilidad para cada clase. Finalmente, se identifica cuál es la clase con mayor probabilidad y se muestra su nombre y el nivel de confianza.
+Paso Intermedio
+El programa también define una función encargada de automatizar todo este proceso de inferencia para cualquier imagen. Esta función permite reutilizar el flujo de preprocesamiento y predicción sin repetir código. Además, limpia el formato de la etiqueta para entregar un resultado claro y comprensible al usuario.
+
+Posteriormente, el programa recorre la carpeta de “test” con cientos de imágenes. Para cada archivo, deduce la etiqueta esperada basándose en su nombre, prepara la imagen y solicita una predicción al modelo. Si la predicción coincide con la etiqueta real, se considera un acierto; si no, se registra como un error. Al mismo tiempo, se acumulan las probabilidades de acierto para calcular una media final.
+Cuando todas las imágenes han sido evaluadas, el programa calcula la precisión final con todos los aciertos y errores que ha tenido el modelo. También calcula la probabilidad media de los aciertos y genera un informe completo que incluye cuántas imágenes fueron clasificadas correctamente y cuáles fueron identificadas de manera incorrecta, indicando la predicción errónea y su probabilidad.
+Este documento lo he creado con la intención de recopilar todos los procesos seguidos para la creación de un modelo de IA de forma clara y objetiva.
