@@ -1,4 +1,4 @@
-# Google-Colab-identificaci-n-de-imagenes-Gato-y-Perro
+# Google Colab identificación de imagenes Gato y Perro
 En este proyecto he creado una IA capaz de identificar y clasificar imagenes de perros y de gatos utilizando machine learning como principal programa y google colab como el compilador para toda la información de cientos de imagenes. 
 
 En primer lugar, se habilitamos el modo legacy Keras, después, el programa carga el modelo ya entrenado, junto a las etiquetas clasificatorias de cada clase.
